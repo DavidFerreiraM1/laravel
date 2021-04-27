@@ -7,6 +7,10 @@ steps:
     name: "docker"
     args: ["ps"]
 
+  - id: "Rodando docker LOGS on MYSQL"
+    name: "docker"
+    args: ["logs db"]
+
   - id: "Chown in /var/www"
     name: "docker"
     args:
