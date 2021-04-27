@@ -9,7 +9,7 @@ steps:
 
   - id: "Rodando docker LOGS on MYSQL"
     name: "docker"
-    args: ["logs db"]
+    args: ["logs", "db"]
 
   - id: "Chown in /var/www"
     name: "docker"
