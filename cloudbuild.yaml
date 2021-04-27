@@ -3,14 +3,6 @@ steps:
     name: "docker/compose"
     args: ["-f", "docker-compose.cloudbuild.yaml", "up", "-d"]
 
-  - id: "Rodando docker ps"
-    name: "docker"
-    args: ["ps"]
-
-  - id: "Rodando docker LOGS on MYSQL"
-    name: "docker"
-    args: ["logs", "db"]
-
   - id: "Chown in /var/www"
     name: "docker"
     args:
@@ -25,6 +17,14 @@ steps:
         "www-data:www-data",
         "/var/www",
       ]
+
+  - id: "Rodando docker ps"
+    name: "docker"
+    args: ["ps"]
+
+  - id: "Rodando docker LOGS on MYSQL"
+    name: "docker"
+    args: ["logs", "db"]
 
   - id: "Rodando composer"
     name: "docker"
