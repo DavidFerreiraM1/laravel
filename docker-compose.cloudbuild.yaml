@@ -53,8 +53,9 @@ services:
       - ./.docker/dbdata:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=laravel
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USER=root
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
     networks:
       - app-networks
 
