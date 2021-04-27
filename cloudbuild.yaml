@@ -26,6 +26,10 @@ steps:
         "/var/www",
       ]
 
+  - id: "Chown in /var/www mysql"
+    name: "docker"
+    args: ["exec", "-u", "root", "-t", "db", "chown", "-R", "mysql:mysql", "."]
+
   - id: "Rodando composer"
     name: "docker"
     args: ["exec", "-t", "app", "composer", "install"]
