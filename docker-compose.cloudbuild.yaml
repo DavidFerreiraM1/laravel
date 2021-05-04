@@ -11,8 +11,8 @@ services:
     #   - DB_DATABASE=laravel
     #   - DB_USERNAME=root
     #   - DB_PASSWORD=root
-    volumes:
-      - .:/var/www
+    # volumes:
+    #   - .:/var/www
     networks:
       - app-networks
     depends_on:
