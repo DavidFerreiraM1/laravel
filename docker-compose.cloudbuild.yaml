@@ -25,9 +25,9 @@ services:
     tty: true
     ports:
       - "8000:80"
-    volumes:
-      - .:/var/www
-      - ./.docker/nginx/templates:/etc/nginx/templates:rw,cached
+    # volumes:
+    #   - .:/var/www
+    #   - ./.docker/nginx/templates:/etc/nginx/templates:rw,cached
     networks:
       - app-networks
     environment:
