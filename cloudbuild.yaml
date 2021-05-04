@@ -52,5 +52,5 @@ steps:
         "php",
         "/var/www/vendor/bin/phpunit",
         "-c",
-        "/var/www/php.xml",
+        "/var/www/phpunit.xml",
       ]
